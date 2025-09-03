@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend # Name of your deployment
+  labels:
+    app: frontend
+    tier: frontend
+spec:
+  replicas: 2  # Desired number of replicas (pods) for your application
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend # Name of your container
+          image: bawa0017/practice:v8 # Your Docker image path
+          imagePullPolicy: IfNotPresent # Or Always, or Never
+          ports:
+            - containerPort: 5000  # Port your frontend application listens on (e.g., Nginx)
+      nodeSelector:
+        front: back  
