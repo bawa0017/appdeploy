@@ -9,4 +9,4 @@ spec:
   resources:
     requests:
       storage: 5Gi
-  storageClassName: gp3   # or gp2
+  storageClassName: gp2  # or gp2
