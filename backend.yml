@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: my-backend-container
-        image: bawa0017/practice:v9
+        image: 273354639531.dkr.ecr.ap-southeast-1.amazonaws.com/bawa0017:backend-20
         envFrom:
           - secretRef:
               name: my-secret

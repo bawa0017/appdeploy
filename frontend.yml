@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: frontend # Name of your container
-          image: bawa0017/practice:v8 # Your Docker image path
+          image: 273354639531.dkr.ecr.ap-southeast-1.amazonaws.com/bawa0017:frontend-20
           imagePullPolicy: IfNotPresent # Or Always, or Never
           ports:
             - containerPort: 5000  # Port your frontend application listens on (e.g., Nginx)
